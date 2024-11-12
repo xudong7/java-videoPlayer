@@ -1,0 +1,47 @@
+/* 23331150 徐栋 视频播放器 作业 */
+/* 设置媒体播放器背景颜色 */
+MediaView {
+    -fx-background-color: #000000;
+}
+
+/* 控制按钮的样式 */
+.controls Button {
+    -fx-background-color: #0078D7;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 5 10;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-min-width: 50px; /* 设置最小宽度，确保按钮宽度稳定 */
+}
+
+/* 悬停效果 */
+.controls Button:hover {
+    -fx-background-color: #005a9e;
+}
+
+/* 滑块样式 */
+Slider {
+    -fx-pref-width: 100px;
+    -fx-control-inner-background: #d0d0d0;
+    -fx-accent: #0078D7;
+    -fx-max-width: 800px;
+}
+
+/* 音量标签的样式 */
+.controls Label {
+    -fx-text-fill: #0078D7;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* HBox 中按钮的对齐方式 */
+.controls HBox {
+    -fx-alignment: center; /* 保证控件垂直居中 */
+    -fx-spacing: 10; /* 保持控件之间的间距 */
+    -fx-padding: 10; /* 为 HBox 添加适当的内边距 */
+}
+
+.controls VBOX {
+    -fx-padding: 10;
+}

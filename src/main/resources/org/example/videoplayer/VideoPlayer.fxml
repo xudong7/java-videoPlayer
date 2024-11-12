@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--        23331150 徐栋 视频播放器 作业-->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.videoplayer.VideoPlayerController" stylesheets="@videoplayer.css">
+    <center>
+        <MediaView fx:id="mediaView" style="-fx-background-color: black;"/>
+    </center>
+    <bottom>
+        <VBox spacing="10" alignment="center" styleClass="controls">
+            <Slider fx:id="progressSlider" maxWidth="800"/>
+            <HBox alignment="center" spacing="12" styleClass="controls">
+                <Button fx:id="openButton" onAction="#openFile" text="Open File"/>
+                <Button fx:id="rewindButton" onAction="#handleRewind" text="Rewind"/>
+                <Button fx:id="playButton" onAction="#handlePlay" text="Play"/>
+                <Button fx:id="forwardButton" onAction="#handleForward" text="Forward"/>
+                <Button fx:id="pauseButton" onAction="#handlePause" text="Pause"/>
+                <Button fx:id="stopButton" onAction="#handleStop" text="Replay"/>
+                <Slider fx:id="volumeSlider" max="1.0" min="0.0" value="0.5" blockIncrement="0.1" prefWidth="100"/>
+                <Label fx:id="volumeLabel" text="50%"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
